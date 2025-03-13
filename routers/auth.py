@@ -6,8 +6,8 @@ from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from pydantic import BaseModel, Field
 from typing import Annotated
 from starlette import status
-from database import engine, LocalSession
-from models import User
+from ..database import engine, LocalSession
+from ..models import User
 from sqlalchemy.orm import Session
 
 from datetime import datetime, timedelta, timezone

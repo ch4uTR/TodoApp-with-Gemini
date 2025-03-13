@@ -3,9 +3,9 @@ from pydantic import BaseModel, Field
 from typing import Annotated
 from starlette import status
 from sqlalchemy.orm import Session
-from database import Base, engine, LocalSession
-from models import Todo, User
-from routers.auth import  get_current_user
+from ..database import Base, engine, LocalSession
+from ..models import Todo, User
+from ..routers.auth import  get_current_user
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 from starlette.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
 
 router = APIRouter(
