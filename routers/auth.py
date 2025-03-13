@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 import os
 
 from fastapi.templating import Jinja2Templates
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
 router = APIRouter(
     prefix="/auth",
